@@ -1,0 +1,476 @@
+body {
+  margin: 0;
+  background: #e8e8e8;
+  color: #161616;
+  font-family: Manrope, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.kontent {
+  width: 92%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.shapka {
+  position: sticky;
+  top: 0;
+  background: #ececec;
+  border-bottom: 1px solid #d2d2d2;
+  z-index: 10;
+}
+
+.shapka-vnutri {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.menu a {
+  margin-left: 22px;
+  font-weight: 600;
+}
+
+.knopka-zelenaya,
+.knopka-temnaya,
+.knopka-sinyaya,
+.knopka-dlinnaya {
+  display: inline-block;
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 6px;
+  color: #fff;
+}
+
+.knopka-zelenaya,
+.knopka-dlinnaya {
+  background: #22a24a;
+}
+
+.knopka-temnaya {
+  background: #2f2f2f;
+}
+
+.knopka-sinyaya {
+  background: #3d63e0;
+}
+
+.knopka-dlinnaya {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.verh {
+  padding: 28px 0 8px;
+}
+
+.dva {
+  display: flex;
+  gap: 18px;
+}
+
+.dva>* {
+  width: 50%;
+}
+
+.levaya-kolonka {
+  background: linear-gradient(#8d8d8d, #6a6a6a);
+  color: #fff;
+  border-radius: 28px;
+  padding: 40px 36px 32px;
+  min-height: 480px;
+}
+
+.metka {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.levaya-kolonka h1 {
+  font-size: 40px;
+  line-height: 1.12;
+  max-width: 420px;
+  margin: 0 0 14px;
+}
+
+.levaya-kolonka p {
+  color: #eee;
+  max-width: 380px;
+}
+
+.anketa {
+  background: #f6f6f6;
+  border: 1px solid #e3e3e3;
+  border-radius: 28px;
+  padding: 26px;
+}
+
+.anketa h2 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.podr {
+  color: #4d4d4d;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.melkiy {
+  font-size: 12px;
+  color: #6f6f6f;
+}
+
+.ok {
+  font-weight: 700;
+}
+
+.chetyre {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.cifra {
+  width: 25%;
+  background: #f3f3f3;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.cifra b {
+  display: block;
+  font-size: 22px;
+}
+
+.cifra span {
+  color: #4d4d4d;
+  font-size: 14px;
+}
+
+.sekciya {
+  padding: 48px 0;
+}
+
+.podpis {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+  margin-bottom: 6px;
+}
+
+.podpis.svetlyy {
+  color: #ececec;
+}
+
+.tarif {
+  min-height: 0;
+}
+
+.percent {
+  font-size: 64px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+}
+
+.uzkiy {
+  margin-top: 16px;
+}
+
+.uzkiy>* {
+  width: 50%;
+}
+
+.mini-temniy {
+  background: #3a3a3a;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.mini-temniy b {
+  display: block;
+  font-size: 20px;
+}
+
+.mini-temniy span {
+  color: #cfcfcf;
+  font-size: 13px;
+}
+
+.tri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.tri .kartochka {
+  width: 32%;
+  box-sizing: border-box;
+}
+
+.kartochka {
+  background: #f6f6f6;
+  border: 1px solid #e2e2e2;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.kartochka p,
+.anketa p {
+  color: #4d4d4d;
+}
+
+.biznes {
+  display: flex;
+  margin-top: 16px;
+  background: linear-gradient(#7a7a7a, #5e5e5e);
+  color: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.biznes-text {
+  width: 55%;
+  padding: 28px 32px;
+}
+
+.biznes-foto {
+  width: 45%;
+}
+
+.biznes-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 230px;
+}
+
+.slider {
+  position: relative;
+  margin-top: 18px;
+}
+
+.okno {
+  overflow: hidden;
+  border-radius: 24px;
+  height: 480px;
+  background: #d5d5d5;
+}
+
+#lenta {
+  display: flex;
+  height: 100%;
+}
+
+.kadr {
+  min-width: 100%;
+  position: relative;
+}
+
+.kadr img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.kadr span {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(30, 30, 30, 0.75);
+  color: #fff;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.strelka {
+  position: absolute;
+  top: 220px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nalevo {
+  left: 14px;
+}
+
+.napravo {
+  right: 14px;
+}
+
+#dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+#dots button {
+  width: 8px;
+  height: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: #bbb;
+  margin: 0 3px;
+}
+
+#dots .on {
+  background: #222;
+}
+
+.qa {
+  background: #f6f6f6;
+  border: 1px solid #e2e2e2;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.q {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.a {
+  display: none;
+  margin-top: 8px;
+  color: #4d4d4d;
+}
+
+.qa.open .a {
+  display: block;
+}
+
+.qr {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.qr img {
+  width: 110px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.phone {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 6px 0 14px;
+}
+
+.niz {
+  background: #2b2b2b;
+  color: #bdbdbd;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.niz-vnutri {
+  display: flex;
+  justify-content: space-between;
+}
+
+.niz b {
+  color: #eee;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  .two,
+  .four,
+  .biznes {
+    display: block;
+  }
+
+  .dva>*,
+  .mini,
+  .tri .kartochka,
+  .biz-text,
+  .biznes-foto {
+    width: 100%;
+  }
+
+  .levaya-kolonka {
+    min-height: 0;
+  }
+
+  .levaya-kolonka h1 {
+    font-size: 28px;
+  }
+
+  .mini,
+  .kartochka {
+    margin-bottom: 10px;
+  }
+}
