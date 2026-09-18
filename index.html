@@ -1,296 +1,267 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="utf-8">
-  <title>Сборка мебели</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/logo.svg">
+<meta charset="utf-8">
+<title>Сборка мебели</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="img/logo.svg">
 </head>
-
 <body>
 
-  <div class="shapka">
-    <div class="kontent shapka-vnutri">
-      <a href="#top" class="logo">
-        <img src="img/logo.svg" alt="лого">
-        Сборка мебели
-      </a>
-      <div class="menu">
-        <a href="#plus">Преимущества</a>
-        <a href="#how">Как работаем</a>
-        <a href="#contacts">Контакты</a>
-        <a href="#jobs">Вакансии</a>
-      </div>
-      <div class="knopki-sverhu">
-        <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
-        <a class="knopka-zelenaya hide-mob" href="#form">Оставить заявку</a>
-      </div>
-      <button type="button" class="menu-btn" id="menuBtn">Меню</button>
+<div class="shapka">
+  <div class="kontent shapka-vnutri">
+    <a href="#top" class="logo">
+      <img src="img/logo.svg" alt="лого">
+      Сборка мебели
+    </a>
+    <div class="menu">
+      <a href="#plus">Преимущества</a>
+      <a href="#how">Как работаем</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#jobs">Вакансии</a>
     </div>
+    <div class="knopki-sverhu">
+      <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
+      <a class="knopka-zelenaya hide-mob" href="#form">Оставить заявку</a>
+    </div>
+    <button type="button" class="burger" id="menuBtn" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+  </div>
+</div>
+
+<div id="top" class="verh">
+  <div class="kontent dva">
+    <div class="levaya-kolonka">
+      <div class="metka">Профессиональный монтаж</div>
+      <h1>Собираем мебель так, чтобы ею сразу можно было пользоваться</h1>
+      <p>Корпусная мебель, кухни, шкафы и офисные системы. Своим инструментом и с фотоотчётом.</p>
+      <a class="knopka-zelenaya" href="#form">Рассчитать сборку</a>
+      <a class="knopka-temnaya" href="#price">Смотреть тарифы</a>
+    </div>
+
+    <form id="form" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+      <input type="hidden" name="_subject" value="Заявка на сборку мебели">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none">
+      <h2>Узнайте стоимость сборки</h2>
+      <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Готовы рассмотреть ваши условия.</p>
+      <label for="name">Имя</label>
+      <input type="text" name="Имя" id="name" placeholder="Как к вам обращаться" required>
+      <label for="phone">Телефон</label>
+      <input type="tel" name="Телефон" id="phone" placeholder="+7 (___) ___-__-__" required>
+      <label for="what">Что нужно собрать</label>
+      <input type="text" name="Что собрать" id="what" placeholder="Кухня, шкаф, офис — как есть" required>
+      <label for="sum">Ориентировочная стоимость мебели</label>
+      <input type="text" name="Стоимость мебели" id="sum" placeholder="Например, 180 000 ₽">
+      <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
+      <p class="melkiy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Ответ — Алексей, +7 900 261-33-22.</p>
+      <p id="msg1" class="ok"></p>
+    </form>
   </div>
 
-  <div id="top" class="verh">
-    <div class="kontent dva">
-      <div class="levaya-kolonka">
-        <div class="metka">Профессиональный монтаж</div>
-        <h1>Собираем мебель так, чтобы ею сразу можно было пользоваться</h1>
-        <p>Корпусная мебель, кухни, шкафы и офисные системы. Своим инструментом и с фотоотчётом.</p>
-        <a class="knopka-zelenaya" href="#form">Рассчитать сборку</a>
-        <a class="knopka-temnaya" href="#price">Смотреть тарифы</a>
-      </div>
+  <div class="kontent chetyre">
+    <div class="cifra"><b>12%</b><span>базовый тариф от стоимости мебели</span></div>
+    <div class="cifra"><b>10%</b><span>при стоимости мебели от 1 000 000 ₽</span></div>
+    <div class="cifra"><b>1 500 ₽</b><span>минимальная стоимость выезда</span></div>
+    <div class="cifra"><b>ЭДО</b><span>закрывающие документы без бумаги</span></div>
+  </div>
+</div>
 
-      <form id="form" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
-        <input type="hidden" name="_subject" value="Заявка на сборку мебели">
+<div id="price" class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Тарифы</div>
+    <h2>Прозрачная цена. Без сюрпризов на объекте.</h2>
+    <div class="dva">
+      <div class="levaya-kolonka tarif">
+        <div class="podpis svetlyy">Базовый тариф</div>
+        <div class="percent">12%</div>
+        <p>от стоимости мебели, но не менее 1 500 ₽ за выезд.</p>
+        <div class="dva uzkiy">
+          <div class="mini-temniy"><b>10%</b><span>если мебель от 1 000 000 ₽</span></div>
+          <div class="mini-temniy"><b>свои условия</b><span>обсуждаем объём и график</span></div>
+        </div>
+      </div>
+      <div class="anketa">
+        <h3>Что входит в работу</h3>
+        <ul>
+          <li>Сборка корпусов, навеска и регулировка фасадов</li>
+          <li>Работа с фурнитурой</li>
+          <li>Вынос упаковки после работы</li>
+          <li>Фотоотчёт по завершении</li>
+        </ul>
+        <a class="knopka-zelenaya" href="#form">Получить расчёт</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="plus" class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Почему мы</div>
+    <h2>Сборщики с инструментом и опытом от 7 лет</h2>
+    <div class="tri">
+      <div class="kartochka"><h3>Оплата на расчётный счёт</h3><p>Работаем как ИП. Удобно магазинам, застройщикам и компаниям с бухгалтерией.</p></div>
+      <div class="kartochka"><h3>Электронный документооборот</h3><p>ЭДО: счета и акты без поездок и сканов.</p></div>
+      <div class="kartochka"><h3>Большинство регионов страны</h3><p>Согласуем логистику под ваш объект.</p></div>
+      <div class="kartochka"><h3>Свой инструмент</h3><p>Не просим шуруповёрт у клиента.</p></div>
+      <div class="kartochka"><h3>Фотоотчёт</h3><p>Фиксируем результат, если принимаете работу удалённо.</p></div>
+      <div class="kartochka"><h3>Сроки и чистота</h3><p>После сборки выносим упаковку.</p></div>
+    </div>
+
+    <div class="biznes">
+      <div class="biznes-text">
+        <div class="podpis svetlyy">Для бизнеса</div>
+        <h2>Сборка, которую можно поставить в расходы</h2>
+        <p>Услуги идут в расходную часть. Закрываем работы документами, а не «на руки».</p>
+        <ul>
+          <li>Договор и закрывающие через ЭДО</li>
+          <li>Оплата на расчётный счёт ИП</li>
+          <li>Тариф 12% / 10%</li>
+        </ul>
+      </div>
+      <div class="biznes-foto">
+        <img src="img/kitchen.jpg" alt="кухня">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="how" class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Как работаем</div>
+    <h2>Четыре шага до сдачи</h2>
+    <div class="chetyre">
+    <div class="kartochka"><h3>Заявка</h3><p>Пишете, что за мебель, город и даты.</p></div>
+    <div class="kartochka"><h3>Расчёт</h3><p>Считаем по тарифу до выезда.</p></div>
+    <div class="kartochka"><h3>Сборка</h3><p>Приезжаем со своим инструментом.</p></div>
+    <div class="kartochka"><h3>Сдача</h3><p>Фотоотчёт, упаковка, документы.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Результат</div>
+    <h2>Фотоотчёт после каждой сборки</h2>
+    <p class="podr">Ровные линии, закрытые фасады, чистый объект.</p>
+    <div class="slider">
+      <button type="button" class="strelka nalevo" id="prev">‹</button>
+      <div class="okno">
+        <div id="lenta">
+          <div class="kadr"><img src="img/wardrobe.jpg" alt=""><span>Шкаф и система хранения</span></div>
+          <div class="kadr"><img src="img/kitchen.jpg" alt=""><span>Кухонный гарнитур</span></div>
+          <div class="kadr"><img src="img/hero.jpg" alt=""><span>Работа на объекте</span></div>
+          <div class="kadr"><img src="img/tools.jpg" alt=""><span>Свой инструмент</span></div>
+          <div class="kadr"><img src="img/dlya-sajta/04-garderob-belyi.jpg" alt=""><span>Гардеробная</span></div>
+          <div class="kadr"><img src="img/dlya-sajta/08-kuhnya-grafit.jpg" alt=""><span>Кухня</span></div>
+        </div>
+      </div>
+      <button type="button" class="strelka napravo" id="next">›</button>
+    </div>
+    <div id="dots"></div>
+  </div>
+</div>
+
+<div class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Вопросы</div>
+    <h2>Коротко по делу</h2>
+    <div class="qa open">
+      <div class="q">От чего считается 12%?</div>
+      <div class="a">От стоимости мебели. Минимум — 1 500 ₽. Если комплект от 1 000 000 ₽, тариф 10%.</div>
+    </div>
+    <div class="qa">
+      <div class="q">Можно работать по вашему договору?</div>
+      <div class="a">Да. Готовы рассмотреть ваши условия при регулярном объёме.</div>
+    </div>
+    <div class="qa">
+      <div class="q">Пост-гарантийное обслуживание</div>
+      <div class="a">Возможно. Условия согласуем после сдачи объекта.</div>
+    </div>
+  </div>
+</div>
+
+<div id="jobs" class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Вакансии</div>
+    <h2>Ищем в команду</h2>
+    <div class="dva">
+      <div class="anketa">
+        <h3>Сборщик мебели</h3>
+        <p class="podr">Сборка корпусной мебели на объектах. Свой инструмент. Опыт работы обязателен.</p>
+        <ul>
+          <li>Наличие автомобиля (желательно)</li>
+          <li>Наличие Яндекс Мессенджера</li>
+          <li>Выезды по согласованию</li>
+          <li>Умение работать с чертежами и техдокументацией</li>
+          <li>Фотоотчёт после работы</li>
+          <li>Наличие самозанятости (желательно)</li>
+        </ul>
+      </div>
+      <form id="job" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+        <input type="hidden" name="_subject" value="Отклик: сборщик мебели">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <h2>Узнайте стоимость сборки</h2>
-        <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Готовы рассмотреть ваши условия.</p>
-        <label>Имя</label>
-        <input type="text" name="Имя" id="name" placeholder="Как к вам обращаться" required>
-        <label>Телефон</label>
-        <input type="tel" name="Телефон" id="phone" placeholder="+7 (___) ___-__-__" required>
-        <label>Что нужно собрать</label>
-        <input type="text" name="Что собрать" id="what" placeholder="Кухня, шкаф, офис — как есть" required>
-        <label>Ориентировочная стоимость мебели</label>
-        <input type="text" name="Стоимость мебели" id="sum" placeholder="Например, 180 000 ₽">
-        <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
-        <p class="melkiy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Ответ — Алексей, +7 900
-          261-33-22.</p>
-        <p id="msg1" class="ok"></p>
+        <input type="text" name="_honey" style="display:none">
+        <h3>Отклик на вакансию</h3>
+        <p class="podr">Оставьте контакты или напишите в Яндекс Мессенджер по QR.</p>
+        <div class="qr">
+          <a href="https://yandex.ru/chat/p/04c0cd06-24d6-9d0e-48c4-b374d5789dba?utm_source=invite" target="_blank" rel="noopener">
+            <img src="img/qr-messenger.png" alt="QR Яндекс Мессенджер">
+          </a>
+          <div>
+            <b>Яндекс Мессенджер</b>
+            <p class="melkiy">Наведите камеру на QR или нажмите на картинку — откроется чат.</p>
+          </div>
+        </div>
+        <label for="name2">Имя</label>
+        <input type="text" name="Имя" id="name2" placeholder="Как к вам обращаться" required>
+        <label for="phone2">Телефон</label>
+        <input type="tel" name="Телефон" id="phone2" placeholder="+7" required>
+        <input type="hidden" name="Вакансия" value="Сборщик мебели">
+        <button class="knopka-dlinnaya" type="submit">Отправить отклик</button>
+        <p id="msg2" class="ok"></p>
       </form>
     </div>
-
-    <div class="kontent chetyre">
-      <div class="cifra"><b>12%</b><span>базовый тариф от стоимости мебели</span></div>
-      <div class="cifra"><b>10%</b><span>при стоимости мебели от 1 000 000 ₽</span></div>
-      <div class="cifra"><b>1 500 ₽</b><span>минимальная стоимость выезда</span></div>
-      <div class="cifra"><b>ЭДО</b><span>закрывающие документы без бумаги</span></div>
-    </div>
   </div>
+</div>
 
-  <div id="price" class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Тарифы</div>
-      <h2>Прозрачная цена. Без сюрпризов на объекте.</h2>
-      <div class="dva">
-        <div class="levaya-kolonka tarif">
-          <div class="podpis svetlyy">Базовый тариф</div>
-          <div class="percent">12%</div>
-          <p>от стоимости мебели, но не менее 1 500 ₽ за выезд.</p>
-          <div class="dva uzkiy">
-            <div class="mini-temniy"><b>10%</b><span>если мебель от 1 000 000 ₽</span></div>
-            <div class="mini-temniy"><b>свои условия</b><span>обсуждаем объём и график</span></div>
-          </div>
-        </div>
-        <div class="anketa">
-          <h3>Что входит в работу</h3>
-          <ul>
-            <li>Сборка корпусов, навеска и регулировка фасадов</li>
-            <li>Работа с фурнитурой</li>
-            <li>Вынос упаковки после работы</li>
-            <li>Фотоотчёт по завершении</li>
-          </ul>
-          <a class="knopka-zelenaya" href="#form">Получить расчёт</a>
-        </div>
+<div id="contacts" class="sekciya">
+  <div class="kontent">
+    <div class="podpis">Контакты</div>
+    <h2>Свяжитесь с Алексеем</h2>
+    <div class="dva">
+      <div class="anketa">
+        <div class="podpis">Телефон</div>
+        <a class="phone" href="tel:+79002613322">+7 900 261-33-22</a>
+        <p><b>Почта:</b> <a href="mailto:xxlexx@list.ru">xxlexx@list.ru</a></p>
+        <p><b>Формат:</b> заявка → расчёт → выезд</p>
+        <p><b>География:</b> большинство регионов России</p>
+        <br>
+        <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
+        <a class="knopka-sinyaya" href="mailto:xxlexx@list.ru">Написать на почту</a>
+      </div>
+      <div class="anketa">
+        <h3>Реквизиты</h3>
+        <p><b>ИП Манькова Нина Александровна</b></p>
+        <p>ИНН 552802135467</p>
+        <p>ОГРНИП 325554300059366</p>
+        <p>Оплата через расчётный счёт</p>
+        <p>Электронный документооборот (ЭДО)</p>
       </div>
     </div>
   </div>
+</div>
 
-  <div id="plus" class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Почему мы</div>
-      <h2>Сборщики с инструментом и опытом от 7 лет</h2>
-      <div class="tri">
-        <div class="kartochka">
-          <h3>Оплата на расчётный счёт</h3>
-          <p>Работаем как ИП. Удобно магазинам, застройщикам и компаниям с бухгалтерией.</p>
-        </div>
-        <div class="kartochka">
-          <h3>Электронный документооборот</h3>
-          <p>ЭДО: счета и акты без поездок и сканов.</p>
-        </div>
-        <div class="kartochka">
-          <h3>Большинство регионов страны</h3>
-          <p>Согласуем логистику под ваш объект.</p>
-        </div>
-        <div class="kartochka">
-          <h3>Свой инструмент</h3>
-          <p>Не просим шуруповёрт у клиента.</p>
-        </div>
-        <div class="kartochka">
-          <h3>Фотоотчёт</h3>
-          <p>Фиксируем результат, если принимаете работу удалённо.</p>
-        </div>
-        <div class="kartochka">
-          <h3>Сроки и чистота</h3>
-          <p>После сборки выносим упаковку.</p>
-        </div>
-      </div>
-
-      <div class="biznes">
-        <div class="biznes-text">
-          <div class="podpis svetlyy">Для бизнеса</div>
-          <h2>Сборка, которую можно поставить в расходы</h2>
-          <p>Услуги идут в расходную часть. Закрываем работы документами, а не «на руки».</p>
-          <ul>
-            <li>Договор и закрывающие через ЭДО</li>
-            <li>Оплата на расчётный счёт ИП</li>
-            <li>Тариф 12% / 10%</li>
-          </ul>
-        </div>
-        <div class="biznes-foto">
-          <img src="img/kitchen.jpg" alt="кухня">
-        </div>
-      </div>
-    </div>
+<div class="niz">
+  <div class="kontent niz-vnutri">
+    <div><b>МАНЬКОВА</b> · сборка и монтаж мебели</div>
+    <div>ИП Манькова Н.А.</div>
   </div>
+</div>
 
-  <div id="how" class="sekciya">
-    <div class="kontent chetyre">
-      <div class="kartochka">
-        <h3>Заявка</h3>
-        <p>Пишете, что за мебель, город и даты.</p>
-      </div>
-      <div class="kartochka">
-        <h3>Расчёт</h3>
-        <p>Считаем по тарифу до выезда.</p>
-      </div>
-      <div class="kartochka">
-        <h3>Сборка</h3>
-        <p>Приезжаем со своим инструментом.</p>
-      </div>
-      <div class="kartochka">
-        <h3>Сдача</h3>
-        <p>Фотоотчёт, упаковка, документы.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Результат</div>
-      <h2>Фотоотчёт после каждой сборки</h2>
-      <p class="podr">Ровные линии, закрытые фасады, чистый объект.</p>
-      <div class="slider">
-        <button type="button" class="strelka nalevo" id="prev">‹</button>
-        <div class="okno">
-          <div id="lenta">
-            <div class="kadr"><img src="img/wardrobe.jpg" alt=""><span>Шкаф и система хранения</span></div>
-            <div class="kadr"><img src="img/kitchen.jpg" alt=""><span>Кухонный гарнитур</span></div>
-            <div class="kadr"><img src="img/hero.jpg" alt=""><span>Работа на объекте</span></div>
-            <div class="kadr"><img src="img/tools.jpg" alt=""><span>Свой инструмент</span></div>
-            <div class="kadr"><img src="img/dlya-sajta/04-garderob-belyi.jpg" alt=""><span>Гардеробная</span></div>
-            <div class="kadr"><img src="img/dlya-sajta/08-kuhnya-grafit.jpg" alt=""><span>Кухня</span></div>
-          </div>
-        </div>
-        <button type="button" class="strelka napravo" id="next">›</button>
-      </div>
-      <div id="dots"></div>
-    </div>
-  </div>
-
-  <div class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Вопросы</div>
-      <h2>Коротко по делу</h2>
-      <div class="qa open">
-        <div class="q">От чего считается 12%?</div>
-        <div class="a">От стоимости мебели. Минимум — 1 500 ₽. Если комплект от 1 000 000 ₽, тариф 10%.</div>
-      </div>
-      <div class="qa">
-        <div class="q">Можно работать по вашему договору?</div>
-        <div class="a">Да. Готовы рассмотреть ваши условия при регулярном объёме.</div>
-      </div>
-      <div class="qa">
-        <div class="q">Пост-гарантийное обслуживание</div>
-        <div class="a">Возможно. Условия согласуем после сдачи объекта.</div>
-      </div>
-    </div>
-  </div>
-
-  <div id="jobs" class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Вакансии</div>
-      <h2>Ищем в команду</h2>
-      <div class="dva">
-        <div class="anketa">
-          <h3>Сборщик мебели</h3>
-          <p class="podr">Сборка корпусной мебели на объектах. Свой инструмент. Опыт работы обязателен.</p>
-          <ul>
-            <li>Наличие автомобиля (желательно)</li>
-            <li>Наличие Яндекс Мессенджера</li>
-            <li>Выезды по согласованию</li>
-            <li>Умение работать с чертежами и техдокументацией</li>
-            <li>Фотоотчёт после работы</li>
-            <li>Наличие самозанятости (желательно)</li>
-          </ul>
-        </div>
-        <form id="job" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
-          <input type="hidden" name="_subject" value="Отклик: сборщик мебели">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <h3>Отклик на вакансию</h3>
-          <p class="podr">Оставьте контакты или напишите в Яндекс Мессенджер по QR.</p>
-          <div class="qr">
-            <a href="https://yandex.ru/chat/p/04c0cd06-24d6-9d0e-48c4-b374d5789dba?utm_source=invite" target="_blank"
-              rel="noopener">
-              <img src="img/qr-messenger.png" alt="QR Яндекс Мессенджер">
-            </a>
-            <div>
-              <b>Яндекс Мессенджер</b>
-              <p class="melkiy">Наведите камеру на QR или нажмите на картинку — откроется чат.</p>
-            </div>
-          </div>
-          <label>Имя</label>
-          <input type="text" name="Имя" id="name2" placeholder="Как к вам обращаться" required>
-          <label>Телефон</label>
-          <input type="tel" name="Телефон" id="phone2" placeholder="+7" required>
-          <input type="hidden" name="Вакансия" value="Сборщик мебели">
-          <button class="knopka-dlinnaya" type="submit">Отправить отклик</button>
-          <p id="msg2" class="ok"></p>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div id="contacts" class="sekciya">
-    <div class="kontent">
-      <div class="podpis">Контакты</div>
-      <h2>Свяжитесь с Алексеем</h2>
-      <div class="dva">
-        <div class="anketa">
-          <div class="podpis">Телефон</div>
-          <a class="phone" href="tel:+79002613322">+7 900 261-33-22</a>
-          <p><b>Почта:</b> <a href="mailto:xxlexx@list.ru">xxlexx@list.ru</a></p>
-          <p><b>Формат:</b> заявка → расчёт → выезд</p>
-          <p><b>География:</b> большинство регионов России</p>
-          <br>
-          <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
-          <a class="knopka-sinyaya" href="mailto:xxlexx@list.ru">Написать на почту</a>
-        </div>
-        <div class="anketa">
-          <h3>Реквизиты</h3>
-          <p><b>ИП Манькова Нина Александровна</b></p>
-          <p>ИНН 552802135467</p>
-          <p>ОГРНИП 325554300059366</p>
-          <p>Оплата через расчётный счёт</p>
-          <p>Электронный документооборот (ЭДО)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="niz">
-    <div class="kontent niz-vnutri">
-      <div><b>МАНЬКОВА</b> · сборка и монтаж мебели</div>
-      <div>ИП Манькова Н.А.</div>
-    </div>
-  </div>
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
-
 </html>

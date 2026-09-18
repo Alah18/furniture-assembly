@@ -1,19 +1,19 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
   margin: 0;
   background: #e8e8e8;
   color: #161616;
   font-family: Manrope, Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
 
 .kontent {
   width: 92%;
@@ -57,10 +57,7 @@ img {
   font-weight: 600;
 }
 
-.knopka-zelenaya,
-.knopka-temnaya,
-.knopka-sinyaya,
-.knopka-dlinnaya {
+.knopka-zelenaya, .knopka-temnaya, .knopka-sinyaya, .knopka-dlinnaya {
   display: inline-block;
   padding: 11px 18px;
   border: 0;
@@ -71,35 +68,29 @@ img {
   color: #fff;
 }
 
-.knopka-zelenaya,
-.knopka-dlinnaya {
-  background: #22a24a;
-}
-
-.knopka-temnaya {
-  background: #2f2f2f;
-}
-
-.knopka-sinyaya {
-  background: #3d63e0;
-}
-
+.knopka-zelenaya, .knopka-dlinnaya { background: #22a24a; }
+.knopka-temnaya { background: #2f2f2f; }
+.knopka-sinyaya { background: #3d63e0; }
 .knopka-dlinnaya {
   width: 100%;
   margin-top: 8px;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
-.verh {
-  padding: 28px 0 8px;
-}
+.verh { padding: 28px 0 8px; }
 
 .dva {
   display: flex;
   gap: 18px;
+  align-items: stretch;
 }
 
-.dva>* {
-  width: 50%;
+.dva > * {
+  flex: 1;
+  width: auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .levaya-kolonka {
@@ -112,7 +103,7 @@ img {
 
 .metka {
   display: inline-block;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255,255,255,0.3);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 11px;
@@ -128,10 +119,7 @@ img {
   margin: 0 0 14px;
 }
 
-.levaya-kolonka p {
-  color: #eee;
-  max-width: 380px;
-}
+.levaya-kolonka p { color: #eee; max-width: 380px; }
 
 .anketa {
   background: #f6f6f6;
@@ -140,14 +128,8 @@ img {
   padding: 26px;
 }
 
-.anketa h2 {
-  margin-top: 0;
-  font-size: 26px;
-}
-
-.podr {
-  color: #4d4d4d;
-}
+.anketa h2 { margin-top: 0; font-size: 26px; }
+.podr { color: #4d4d4d; }
 
 label {
   display: block;
@@ -159,8 +141,7 @@ label {
   color: #6f6f6f;
 }
 
-input[type="text"],
-input[type="tel"] {
+input[type="text"], input[type="tel"] {
   width: 100%;
   padding: 12px 14px;
   border: 1px solid #e0e0e0;
@@ -169,14 +150,8 @@ input[type="tel"] {
   font: inherit;
 }
 
-.melkiy {
-  font-size: 12px;
-  color: #6f6f6f;
-}
-
-.ok {
-  font-weight: 700;
-}
+.melkiy { font-size: 12px; color: #6f6f6f; }
+.ok { font-weight: 700; }
 
 .chetyre {
   display: flex;
@@ -185,27 +160,19 @@ input[type="tel"] {
 }
 
 .cifra {
-  width: 25%;
+  flex: 1;
+  width: auto;
   background: #f3f3f3;
   border: 1px solid #e0e0e0;
   border-radius: 18px;
   padding: 16px;
+  box-sizing: border-box;
 }
 
-.cifra b {
-  display: block;
-  font-size: 22px;
-}
+.cifra b { display: block; font-size: 22px; }
+.cifra span { color: #4d4d4d; font-size: 14px; }
 
-.cifra span {
-  color: #4d4d4d;
-  font-size: 14px;
-}
-
-.sekciya {
-  padding: 48px 0;
-}
-
+.sekciya { padding: 48px 0; }
 .podpis {
   font-size: 12px;
   letter-spacing: 2px;
@@ -213,44 +180,20 @@ input[type="tel"] {
   color: #6f6f6f;
   margin-bottom: 6px;
 }
+.podpis.svetlyy { color: #ececec; }
 
-.podpis.svetlyy {
-  color: #ececec;
-}
-
-.tarif {
-  min-height: 0;
-}
-
-.percent {
-  font-size: 64px;
-  font-weight: 700;
-  margin: 4px 0 8px;
-}
-
-.uzkiy {
-  margin-top: 16px;
-}
-
-.uzkiy>* {
-  width: 50%;
-}
+.tarif { min-height: 0; }
+.percent { font-size: 64px; font-weight: 700; margin: 4px 0 8px; }
+.uzkiy { margin-top: 16px; }
+.uzkiy > * { flex: 1; width: auto; }
 
 .mini-temniy {
   background: #3a3a3a;
   border-radius: 16px;
   padding: 16px;
 }
-
-.mini-temniy b {
-  display: block;
-  font-size: 20px;
-}
-
-.mini-temniy span {
-  color: #cfcfcf;
-  font-size: 13px;
-}
+.mini-temniy b { display: block; font-size: 20px; }
+.mini-temniy span { color: #cfcfcf; font-size: 13px; }
 
 .tri {
   display: flex;
@@ -260,7 +203,8 @@ input[type="tel"] {
 }
 
 .tri .kartochka {
-  width: 32%;
+  flex: 1 1 30%;
+  width: auto;
   box-sizing: border-box;
 }
 
@@ -271,10 +215,7 @@ input[type="tel"] {
   padding: 18px;
 }
 
-.kartochka p,
-.anketa p {
-  color: #4d4d4d;
-}
+.kartochka p, .anketa p { color: #4d4d4d; }
 
 .biznes {
   display: flex;
@@ -285,15 +226,8 @@ input[type="tel"] {
   overflow: hidden;
 }
 
-.biznes-text {
-  width: 55%;
-  padding: 28px 32px;
-}
-
-.biznes-foto {
-  width: 45%;
-}
-
+.biznes-text { width: 55%; padding: 28px 32px; }
+.biznes-foto { width: 45%; }
 .biznes-foto img {
   width: 100%;
   height: 100%;
@@ -302,10 +236,7 @@ input[type="tel"] {
   min-height: 230px;
 }
 
-.slider {
-  position: relative;
-  margin-top: 18px;
-}
+.slider { position: relative; margin-top: 18px; }
 
 .okno {
   overflow: hidden;
@@ -314,10 +245,7 @@ input[type="tel"] {
   background: #d5d5d5;
 }
 
-#lenta {
-  display: flex;
-  height: 100%;
-}
+#lenta { display: flex; height: 100%; }
 
 .kadr {
   min-width: 100%;
@@ -335,7 +263,7 @@ input[type="tel"] {
   position: absolute;
   left: 16px;
   bottom: 16px;
-  background: rgba(30, 30, 30, 0.75);
+  background: rgba(30,30,30,0.75);
   color: #fff;
   padding: 7px 12px;
   border-radius: 20px;
@@ -344,7 +272,8 @@ input[type="tel"] {
 
 .strelka {
   position: absolute;
-  top: 220px;
+  top: 50%;
+  margin-top: -20px;
   width: 40px;
   height: 40px;
   border: 0;
@@ -355,19 +284,10 @@ input[type="tel"] {
   z-index: 2;
 }
 
-.nalevo {
-  left: 14px;
-}
+.nalevo { left: 14px; }
+.napravo { right: 14px; }
 
-.napravo {
-  right: 14px;
-}
-
-#dots {
-  text-align: center;
-  margin-top: 12px;
-}
-
+#dots { text-align: center; margin-top: 12px; }
 #dots button {
   width: 8px;
   height: 8px;
@@ -376,10 +296,7 @@ input[type="tel"] {
   background: #bbb;
   margin: 0 3px;
 }
-
-#dots .on {
-  background: #222;
-}
+#dots .on { background: #222; }
 
 .qa {
   background: #f6f6f6;
@@ -389,20 +306,9 @@ input[type="tel"] {
   margin-bottom: 10px;
 }
 
-.q {
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.a {
-  display: none;
-  margin-top: 8px;
-  color: #4d4d4d;
-}
-
-.qa.open .a {
-  display: block;
-}
+.q { font-weight: 700; cursor: pointer; }
+.a { display: none; margin-top: 8px; color: #4d4d4d; }
+.qa.open .a { display: block; }
 
 .qr {
   display: flex;
@@ -438,126 +344,79 @@ input[type="tel"] {
   justify-content: space-between;
 }
 
-.niz b {
-  color: #eee;
-}
+.niz b { color: #eee; }
 
-.menu-btn {
+
+.burger {
   display: none;
-  background: #333;
-  color: #fff;
+  width: 42px;
+  height: 42px;
   border: 0;
-  border-radius: 20px;
-  padding: 8px 14px;
-  font-weight: 700;
+  background: transparent;
+  padding: 10px 8px;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  height: 2px;
+  background: #222;
+  margin: 5px 0;
+  border-radius: 2px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .menu {
     display: none;
     position: absolute;
     left: 0;
     right: 0;
-    top: 72px;
+    top: 100%;
     background: #ececec;
     border-bottom: 1px solid #d2d2d2;
-    padding: 12px 16px 16px;
+    padding: 16px 20px 20px;
   }
-
-  .menu.open {
-    display: block;
-  }
-
+  .menu.open { display: block; }
   .menu a {
     display: block;
-    margin: 0 0 10px 0;
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
     font-size: 16px;
   }
-
-  .menu-btn {
-    display: inline-block;
-  }
-
-  .hide-mob {
-    display: none;
-  }
-
-  .shapka-vnutri {
-    position: relative;
-    height: auto;
-    min-height: 64px;
-    padding: 8px 0;
-    gap: 8px;
-  }
-
-  .dva,
-  .chetyre,
-  .tri,
-  .biznes,
-  .uzkiy,
-  .niz-vnutri,
-  .qr {
+  .burger { display: block; }
+  .hide-mob { display: none !important; }
+  .shapka { position: sticky; }
+  .shapka-vnutri { position: relative; }
+  .dva, .chetyre, .tri, .biznes, .uzkiy, .niz-vnutri, .qr {
     display: block;
   }
-
-  .dva>*,
-  .cifra,
-  .tri .kartochka,
-  .biznes-text,
-  .biznes-foto {
+  .dva > *, .cifra, .tri .kartochka, .biznes-text, .biznes-foto {
     width: 100%;
+    flex: none;
+    box-sizing: border-box;
   }
+  .chetyre { flex-wrap: wrap; }
+  .chetyre .kartochka, .chetyre .cifra { width: 100%; }
 
   .levaya-kolonka {
     min-height: 0;
     padding: 24px 20px;
   }
-
   .levaya-kolonka h1 {
     font-size: 28px;
     max-width: none;
   }
-
-  .percent {
-    font-size: 48px;
-  }
-
-  .cifra,
-  .kartochka,
-  .anketa {
-    margin-bottom: 10px;
-  }
-
-  .okno,
-  .kadr img {
-    height: 240px;
-  }
-
-  .strelka {
-    top: 100px;
-  }
-
-  .phone {
-    font-size: 22px;
-  }
-
-  .knopki-sverhu .knopka-zelenaya {
-    padding: 8px 12px;
-    font-size: 13px;
-  }
+  .percent { font-size: 48px; }
+  .cifra, .kartochka, .anketa { margin-bottom: 12px; }
+  .okno, .kadr img { height: 240px; }
+  .phone { font-size: 22px; }
 }
 
-@media (max-width: 520px) {
-  .kontent {
-    width: 94%;
-  }
-
-  .logo span,
-  .logo {
-    font-size: 11px;
-  }
-
-  .sekciya {
-    padding: 28px 0;
-  }
+@media (max-width: 700px) {
+  .kontent { width: 94%; }
+  .knopki-sverhu { display: none; }
+  .sekciya { padding: 28px 0; }
+  .verh { padding: 16px 0 8px; }
+  .logo { font-size: 12px; }
 }
+

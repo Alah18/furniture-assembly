@@ -19,22 +19,28 @@ function show(i) {
   document.getElementById("dots").innerHTML = html;
 }
 
-window.onload = function () {
-  document.getElementById("prev").onclick = function () { show(cur - 1); };
-  document.getElementById("next").onclick = function () { show(cur + 1); };
-  show(0);
+window.onload = function() {
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
+  if (prev) prev.onclick = function() { show(cur - 1); };
+  if (next) next.onclick = function() { show(cur + 1); };
+  if (document.getElementById("lenta")) show(0);
 
   var btn = document.getElementById("menuBtn");
   var menu = document.querySelector(".menu");
   if (btn && menu) {
-    btn.onclick = function () {
+    btn.onclick = function() {
       menu.classList.toggle("open");
     };
+    var links = menu.getElementsByTagName("a");
+    for (var k = 0; k < links.length; k++) {
+      links[k].onclick = function() { menu.classList.remove("open"); };
+    }
   }
 
   var items = document.getElementsByClassName("qa");
   for (var i = 0; i < items.length; i++) {
-    items[i].getElementsByClassName("q")[0].onclick = function () {
+    items[i].getElementsByClassName("q")[0].onclick = function() {
       this.parentNode.classList.toggle("open");
     };
   }
