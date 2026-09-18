@@ -26,8 +26,9 @@
       </div>
       <div class="knopki-sverhu">
         <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
-        <a class="knopka-zelenaya" href="#form">Оставить заявку</a>
+        <a class="knopka-zelenaya hide-mob" href="#form">Оставить заявку</a>
       </div>
+      <button type="button" class="menu-btn" id="menuBtn">Меню</button>
     </div>
   </div>
 
@@ -41,17 +42,20 @@
         <a class="knopka-temnaya" href="#price">Смотреть тарифы</a>
       </div>
 
-      <form id="form" class="anketa">
+      <form id="form" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+        <input type="hidden" name="_subject" value="Заявка на сборку мебели">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <h2>Узнайте стоимость сборки</h2>
         <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Готовы рассмотреть ваши условия.</p>
         <label>Имя</label>
-        <input type="text" id="name" placeholder="Как к вам обращаться" required>
+        <input type="text" name="Имя" id="name" placeholder="Как к вам обращаться" required>
         <label>Телефон</label>
-        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+        <input type="tel" name="Телефон" id="phone" placeholder="+7 (___) ___-__-__" required>
         <label>Что нужно собрать</label>
-        <input type="text" id="what" placeholder="Кухня, шкаф, офис — как есть" required>
+        <input type="text" name="Что собрать" id="what" placeholder="Кухня, шкаф, офис — как есть" required>
         <label>Ориентировочная стоимость мебели</label>
-        <input type="text" id="sum" placeholder="Например, 180 000 ₽">
+        <input type="text" name="Стоимость мебели" id="sum" placeholder="Например, 180 000 ₽">
         <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
         <p class="melkiy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Ответ — Алексей, +7 900
           261-33-22.</p>
@@ -224,21 +228,27 @@
             <li>Наличие самозанятости (желательно)</li>
           </ul>
         </div>
-        <form id="job" class="anketa">
+        <form id="job" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+          <input type="hidden" name="_subject" value="Отклик: сборщик мебели">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <h3>Отклик на вакансию</h3>
           <p class="podr">Оставьте контакты или напишите в Яндекс Мессенджер по QR.</p>
           <div class="qr">
-            <img src="img/qr-messenger.png" alt="QR">
+            <a href="https://yandex.ru/chat/p/04c0cd06-24d6-9d0e-48c4-b374d5789dba?utm_source=invite" target="_blank"
+              rel="noopener">
+              <img src="img/qr-messenger.png" alt="QR Яндекс Мессенджер">
+            </a>
             <div>
               <b>Яндекс Мессенджер</b>
-              <p class="melkiy">Наведите камеру — откроется чат. Когда будет постоянная ссылка-приглашение, заменим QR.
-              </p>
+              <p class="melkiy">Наведите камеру на QR или нажмите на картинку — откроется чат.</p>
             </div>
           </div>
           <label>Имя</label>
-          <input type="text" id="name2" placeholder="Как к вам обращаться" required>
+          <input type="text" name="Имя" id="name2" placeholder="Как к вам обращаться" required>
           <label>Телефон</label>
-          <input type="tel" id="phone2" placeholder="+7" required>
+          <input type="tel" name="Телефон" id="phone2" placeholder="+7" required>
+          <input type="hidden" name="Вакансия" value="Сборщик мебели">
           <button class="knopka-dlinnaya" type="submit">Отправить отклик</button>
           <p id="msg2" class="ok"></p>
         </form>
@@ -274,7 +284,7 @@
   </div>
 
   <div class="niz">
-    <div class="inner footer-line">
+    <div class="kontent niz-vnutri">
       <div><b>МАНЬКОВА</b> · сборка и монтаж мебели</div>
       <div>ИП Манькова Н.А.</div>
     </div>

@@ -1,24 +1,5 @@
 var cur = 0;
 
-function sendForm(e) {
-  e.preventDefault();
-  var text = "Имя: " + document.getElementById("name").value +
-    "\nТелефон: " + document.getElementById("phone").value +
-    "\nЧто собрать: " + document.getElementById("what").value +
-    "\nСтоимость мебели: " + (document.getElementById("sum").value || "не указана");
-  document.getElementById("msg1").innerHTML = "Откроется письмо на xxlexx@list.ru";
-  window.location.href = "mailto:xxlexx@list.ru?subject=Заявка на сборку&body=" + encodeURIComponent(text);
-}
-
-function sendJob(e) {
-  e.preventDefault();
-  var text = "Имя: " + document.getElementById("name2").value +
-    "\nТелефон: " + document.getElementById("phone2").value +
-    "\nВакансия: Сборщик мебели";
-  document.getElementById("msg2").innerHTML = "Откроется письмо с откликом";
-  window.location.href = "mailto:xxlexx@list.ru?subject=Отклик: сборщик&body=" + encodeURIComponent(text);
-}
-
 function total() {
   return document.getElementById("lenta").children.length;
 }
@@ -39,11 +20,17 @@ function show(i) {
 }
 
 window.onload = function () {
-  document.getElementById("form").onsubmit = sendForm;
-  document.getElementById("job").onsubmit = sendJob;
   document.getElementById("prev").onclick = function () { show(cur - 1); };
   document.getElementById("next").onclick = function () { show(cur + 1); };
   show(0);
+
+  var btn = document.getElementById("menuBtn");
+  var menu = document.querySelector(".menu");
+  if (btn && menu) {
+    btn.onclick = function () {
+      menu.classList.toggle("open");
+    };
+  }
 
   var items = document.getElementsByClassName("qa");
   for (var i = 0; i < items.length; i++) {
