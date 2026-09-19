@@ -34,13 +34,13 @@
   <div class="kontent dva">
     <div class="levaya-kolonka">
       <div class="metka">Профессиональный монтаж</div>
-      <h1>Собираем мебель так, чтобы ею сразу можно было пользоваться</h1>
-      <p>Корпусная мебель, кухни, шкафы и офисные системы. Своим инструментом и с фотоотчётом.</p>
+      <h1>Собираем мебель так, чтобы сразу можно было пользоваться</h1>
+      <p>Корпусная мебель, шкафы, столы и офисные системы. Своим инструментом и с фотоотчётом.</p>
       <a class="knopka-zelenaya" href="#form">Рассчитать сборку</a>
       <a class="knopka-temnaya" href="#price">Смотреть тарифы</a>
     </div>
 
-    <form id="form" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+    <form id="form" class="anketa" action="https://formsubmit.co/bromkvantiko@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Заявка на сборку мебели">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -49,12 +49,16 @@
       <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Готовы рассмотреть ваши условия.</p>
       <label for="name">Имя</label>
       <input type="text" name="Имя" id="name" placeholder="Как к вам обращаться" required>
+      <p class="oshibka" id="err-name"></p>
       <label for="phone">Телефон</label>
       <input type="tel" name="Телефон" id="phone" placeholder="+7 (___) ___-__-__" required>
+      <p class="oshibka" id="err-phone"></p>
       <label for="what">Что нужно собрать</label>
-      <input type="text" name="Что собрать" id="what" placeholder="Кухня, шкаф, офис — как есть" required>
-      <label for="sum">Ориентировочная стоимость мебели</label>
-      <input type="text" name="Стоимость мебели" id="sum" placeholder="Например, 180 000 ₽">
+      <input type="text" name="Что собрать" id="what" placeholder="Шкаф, стол, стеллаж — как есть" required>
+      <p class="oshibka" id="err-what"></p>
+      <label for="sum">Стоимость мебели</label>
+      <input type="text" name="Стоимость мебели" id="sum" placeholder="180 000 ₽">
+      <p class="oshibka" id="err-sum"></p>
       <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
       <p class="melkiy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Ответ — Алексей, +7 900 261-33-22.</p>
       <p id="msg1" class="ok"></p>
@@ -122,7 +126,7 @@
         </ul>
       </div>
       <div class="biznes-foto">
-        <img src="img/kitchen.jpg" alt="кухня">
+        <img src="img/raboty/02-shkaf.jpg" alt="офисная мебель">
       </div>
     </div>
   </div>
@@ -150,12 +154,12 @@
       <button type="button" class="strelka nalevo" id="prev">‹</button>
       <div class="okno">
         <div id="lenta">
-          <div class="kadr"><img src="img/wardrobe.jpg" alt=""><span>Шкаф и система хранения</span></div>
-          <div class="kadr"><img src="img/kitchen.jpg" alt=""><span>Кухонный гарнитур</span></div>
-          <div class="kadr"><img src="img/hero.jpg" alt=""><span>Работа на объекте</span></div>
-          <div class="kadr"><img src="img/tools.jpg" alt=""><span>Свой инструмент</span></div>
-          <div class="kadr"><img src="img/dlya-sajta/04-garderob-belyi.jpg" alt=""><span>Гардеробная</span></div>
-          <div class="kadr"><img src="img/dlya-sajta/08-kuhnya-grafit.jpg" alt=""><span>Кухня</span></div>
+          <div class="kadr"><img src="img/raboty/01-stol.jpg" alt="Офисный стол"><span>Офисный стол</span></div>
+          <div class="kadr"><img src="img/raboty/02-shkaf.jpg" alt="Шкаф"><span>Шкаф</span></div>
+          <div class="kadr"><img src="img/raboty/03-stol-2.jpg" alt="Рабочая зона"><span>Рабочая зона</span></div>
+          <div class="kadr"><img src="img/raboty/04-tumba.jpg" alt="Тумба"><span>Тумба</span></div>
+          <div class="kadr"><img src="img/raboty/05-stulya.jpg" alt="Кресла"><span>Кресла</span></div>
+          <div class="kadr"><img src="img/raboty/06-peregovorka.jpg" alt="Переговорная"><span>Переговорная</span></div>
         </div>
       </div>
       <button type="button" class="strelka napravo" id="next">›</button>
@@ -200,7 +204,7 @@
           <li>Наличие самозанятости (желательно)</li>
         </ul>
       </div>
-      <form id="job" class="anketa" action="https://formsubmit.co/xxlexx@list.ru" method="POST">
+      <form id="job" class="anketa" action="https://formsubmit.co/bromkvantiko@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Отклик: сборщик мебели">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
@@ -218,8 +222,10 @@
         </div>
         <label for="name2">Имя</label>
         <input type="text" name="Имя" id="name2" placeholder="Как к вам обращаться" required>
+        <p class="oshibka" id="err-name2"></p>
         <label for="phone2">Телефон</label>
         <input type="tel" name="Телефон" id="phone2" placeholder="+7" required>
+        <p class="oshibka" id="err-phone2"></p>
         <input type="hidden" name="Вакансия" value="Сборщик мебели">
         <button class="knopka-dlinnaya" type="submit">Отправить отклик</button>
         <p id="msg2" class="ok"></p>
