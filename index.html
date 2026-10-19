@@ -17,6 +17,7 @@
       Сборка мебели
     </a>
     <div class="menu">
+      <a href="#price">Тарифы</a>
       <a href="#plus">Преимущества</a>
       <a href="#how">Как работаем</a>
       <a href="#contacts">Контакты</a>
@@ -35,16 +36,24 @@
       <div class="metka">Профессиональный монтаж</div>
       <h1>Собираем мебель так, чтобы сразу можно было пользоваться</h1>
       <p>Корпусная мебель, шкафы, столы и офисные системы. Своим инструментом и с фотоотчётом.</p>
-      <a class="knopka-temnaya" href="#price">Смотреть тарифы</a>
+      <div class="tolko-yur">Работаем только с юридическими лицами и ИП</div>
+      <ul class="hero-list">
+        <li>Опыт сборщиков от 7 лет</li>
+        <li>Свой инструмент на каждый выезд</li>
+        <li>Фотоотчёт и ЭДО</li>
+        <li>Большинство регионов России</li>
+      </ul>
+      <a class="knopka-zelenaya knopka-hero" href="#price">Смотреть тарифы</a>
     </div>
 
-    <form id="form" class="anketa" action="https://formsubmit.co/bromkvantiko@gmail.com" method="POST">
+    <form id="form" class="anketa" action="https://formsubmit.co/bromkvantiko@gmail.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Заявка на сборку мебели">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
       <input type="text" name="_honey" style="display:none">
       <h2>Узнайте стоимость сборки</h2>
-      <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Готовы рассмотреть ваши условия.</p>
+      <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Работаем только с юр. лицами и ИП.</p>
       <label for="name">Имя</label>
       <input type="text" name="Имя" id="name" placeholder="Как к вам обращаться" required>
       <p class="oshibka" id="err-name"></p>
@@ -57,8 +66,16 @@
       <label for="sum">Стоимость мебели</label>
       <input type="text" name="Стоимость мебели" id="sum" placeholder="180 000 ₽">
       <p class="oshibka" id="err-sum"></p>
+      <label for="file">Прикрепить файл (PDF, фото)</label>
+      <input type="file" name="Файл" id="file" accept=".pdf,image/*">
+      <div class="checkbox-wrap" id="consent-wrap">
+        <label class="checkbox-label">
+          <input type="checkbox" name="Согласие" id="consent" value="Да">
+          <span>Даю согласие на обработку персональных данных в соответствии с <a href="#politika" target="_blank">Политикой конфиденциальности</a>.</span>
+        </label>
+        <p class="oshibka" id="err-consent"></p>
+      </div>
       <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
-      <p class="melkiy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Ответ — Алексей, +7 900 261-33-22.</p>
       <p id="msg1" class="ok"></p>
     </form>
   </div>
@@ -75,6 +92,7 @@
   <div class="kontent">
     <div class="podpis">Тарифы</div>
     <h2>Прозрачная цена. Без сюрпризов на объекте.</h2>
+    <p class="tolko-yur-inline">Работаем только с юридическими лицами и ИП</p>
     <div class="dva">
       <div class="levaya-kolonka tarif">
         <div class="podpis svetlyy">Базовый тариф</div>
@@ -116,11 +134,15 @@
         <div class="podpis svetlyy">Для бизнеса</div>
         <h2>Сборка, которую можно поставить в расходы</h2>
         <p>Услуги идут в расходную часть. Закрываем работы документами, а не «на руки».</p>
+        <div class="tolko-yur biznes-badge">Только юр. лица и ИП</div>
         <ul>
           <li>Договор и закрывающие через ЭДО</li>
           <li>Оплата на расчётный счёт ИП</li>
           <li>Тариф 12% / 10%</li>
+          <li>Фотоотчёт после каждой сборки</li>
+          <li>Вынос упаковки, чистый объект</li>
         </ul>
+        <a class="knopka-zelenaya" href="#form" style="margin-top:16px;">Оставить заявку</a>
       </div>
       <div class="biznes-foto">
         <img src="img/raboty/07-koridor.jpg" alt="офисная мебель">
@@ -133,11 +155,11 @@
   <div class="kontent">
     <div class="podpis">Как работаем</div>
     <h2>Четыре шага до сдачи</h2>
-    <div class="chetyre">
-    <div class="kartochka"><h3>Заявка</h3><p>Пишете, что за мебель, город и даты.</p></div>
-    <div class="kartochka"><h3>Расчёт</h3><p>Считаем по тарифу до выезда.</p></div>
-    <div class="kartochka"><h3>Сборка</h3><p>Приезжаем со своим инструментом.</p></div>
-    <div class="kartochka"><h3>Сдача</h3><p>Фотоотчёт, упаковка, документы.</p></div>
+    <div class="chetyre how-steps">
+      <div class="kartochka"><h3>Заявка</h3><p>Пишете, что за мебель, город и даты.</p></div>
+      <div class="kartochka"><h3>Расчёт</h3><p>Считаем по тарифу до выезда.</p></div>
+      <div class="kartochka"><h3>Сборка</h3><p>Приезжаем со своим инструментом.</p></div>
+      <div class="kartochka"><h3>Сдача</h3><p>Фотоотчёт, упаковка, документы.</p></div>
     </div>
   </div>
 </div>
@@ -173,20 +195,23 @@
     <div class="podpis">Вопросы</div>
     <h2>Коротко по делу</h2>
     <div class="qa open">
-      <div class="q">От чего считается 12%?</div>
+      <div class="q">От чего считается 12%? <span class="strelka-qa">▼</span></div>
       <div class="a">От стоимости мебели. Минимум — 1 500 ₽. Если комплект от 1 000 000 ₽, тариф 10%.</div>
     </div>
     <div class="qa">
-      <div class="q">Можно работать по вашему договору?</div>
+      <div class="q">Можно работать по вашему договору? <span class="strelka-qa">▼</span></div>
       <div class="a">Да. Готовы рассмотреть ваши условия при регулярном объёме.</div>
     </div>
     <div class="qa">
-      <div class="q">Пост-гарантийное обслуживание</div>
+      <div class="q">Пост-гарантийное обслуживание <span class="strelka-qa">▼</span></div>
       <div class="a">Возможно. Условия согласуем после сдачи объекта.</div>
+    </div>
+    <div class="qa">
+      <div class="q">Работаете с физическими лицами? <span class="strelka-qa">▼</span></div>
+      <div class="a">Нет. Работаем только с юридическими лицами и ИП.</div>
     </div>
   </div>
 </div>
-
 
 <div id="contacts" class="sekciya">
   <div class="kontent">
@@ -199,6 +224,7 @@
         <p><b>Почта:</b> <a href="mailto:xxlexx@list.ru">xxlexx@list.ru</a></p>
         <p><b>Формат:</b> заявка → расчёт → выезд</p>
         <p><b>География:</b> большинство регионов России</p>
+        <p><b>Клиенты:</b> только юридические лица и ИП</p>
         <br>
         <a class="knopka-zelenaya" href="tel:+79002613322">Позвонить</a>
         <a class="knopka-sinyaya" href="mailto:xxlexx@list.ru">Написать на почту</a>
@@ -218,7 +244,26 @@
 <div class="niz">
   <div class="kontent niz-vnutri">
     <div><b>МАНЬКОВА</b> · сборка и монтаж мебели</div>
-    <div>ИП Манькова Н.А.</div>
+    <div>
+      <a href="#politika">Политика конфиденциальности</a>
+      · ИП Манькова Н.А.
+    </div>
+  </div>
+</div>
+
+<div id="cookie" class="cookie-banner">
+  <div class="kontent cookie-vnutri">
+    <p>Мы используем файлы cookie для корректной работы сайта, анализа посещаемости и улучшения качества обслуживания. Нажимая кнопку «Принимаю», вы соглашаетесь на использование cookie в соответствии с Политикой обработки персональных данных. Вы можете запретить сохранение cookie в настройках своего браузера. При отключении cookie некоторые функции сайта могут работать некорректно.</p>
+    <button type="button" class="knopka-zelenaya" id="cookieAccept">Принимаю</button>
+  </div>
+</div>
+
+<div id="politika" class="politika-modal">
+  <div class="politika-content">
+    <button type="button" class="politika-close" id="politikaClose">×</button>
+    <h2>Политика конфиденциальности</h2>
+    <p>Полный текст Политики конфиденциальности будет как скините доки.</p>
+    <p>По вопросам обработки персональных данных обращайтесь: xxlexx@list.ru, +7 900 261-33-22.</p>
   </div>
 </div>
 

@@ -1,4 +1,3 @@
-
 function digits(s) {
   return (s || "").replace(/\D/g, "");
 }
@@ -91,12 +90,26 @@ function checkSum(el, errId) {
   return true;
 }
 
+function checkConsent() {
+  var cb = document.getElementById("consent");
+  var wrap = document.getElementById("consent-wrap");
+  if (!cb || !cb.checked) {
+    showErr("err-consent", "Нужно дать согласие на обработку данных");
+    if (wrap) wrap.className = (wrap.className + " ploho").replace(/\sploho/g, "") + " ploho";
+    return false;
+  }
+  showErr("err-consent", "");
+  if (wrap) wrap.className = wrap.className.replace(/\s*ploho/g, "");
+  return true;
+}
+
 function checkLead(e) {
   var ok = true;
   if (!checkName(document.getElementById("name"), "err-name")) ok = false;
   if (!checkPhone(document.getElementById("phone"), "err-phone")) ok = false;
   if (!checkWhat(document.getElementById("what"), "err-what")) ok = false;
   if (!checkSum(document.getElementById("sum"), "err-sum")) ok = false;
+  if (!checkConsent()) ok = false;
   if (!ok) e.preventDefault();
 }
 
@@ -166,6 +179,36 @@ window.onload = function() {
   for (var i = 0; i < items.length; i++) {
     items[i].getElementsByClassName("q")[0].onclick = function() {
       this.parentNode.classList.toggle("open");
+    };
+  }
+
+  var cookieBanner = document.getElementById("cookie");
+  var cookieAccept = document.getElementById("cookieAccept");
+  if (cookieBanner && cookieAccept) {
+    if (!localStorage.getItem("cookieAccepted")) {
+      cookieBanner.classList.add("show");
+    }
+    cookieAccept.onclick = function() {
+      localStorage.setItem("cookieAccepted", "1");
+      cookieBanner.classList.remove("show");
+    };
+  }
+
+  var politikaLinks = document.querySelectorAll('a[href="#politika"]');
+  var politikaModal = document.getElementById("politika");
+  var politikaClose = document.getElementById("politikaClose");
+  for (var p = 0; p < politikaLinks.length; p++) {
+    politikaLinks[p].onclick = function(e) {
+      e.preventDefault();
+      if (politikaModal) politikaModal.classList.add("open");
+    };
+  }
+  if (politikaClose && politikaModal) {
+    politikaClose.onclick = function() {
+      politikaModal.classList.remove("open");
+    };
+    politikaModal.onclick = function(e) {
+      if (e.target === politikaModal) politikaModal.classList.remove("open");
     };
   }
 };
