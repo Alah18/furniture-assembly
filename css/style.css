@@ -66,6 +66,7 @@ img { max-width: 100%; }
   cursor: pointer;
   margin-right: 6px;
   color: #fff;
+  text-align: center;
 }
 
 .knopka-zelenaya, .knopka-dlinnaya { background: #22a24a; }
@@ -112,6 +113,7 @@ img { max-width: 100%; }
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 16px;
+  align-self: flex-start;
 }
 
 .levaya-kolonka h1 {
@@ -134,6 +136,7 @@ img { max-width: 100%; }
   margin: 14px 0 18px;
   max-width: none;
   letter-spacing: 0.2px;
+  align-self: flex-start;
 }
 
 .tolko-yur-inline {
@@ -172,6 +175,7 @@ img { max-width: 100%; }
   font-size: 16px;
   border-radius: 30px;
   box-shadow: 0 4px 14px rgba(34, 162, 74, 0.35);
+  align-self: flex-start;
 }
 
 .knopka-hero:hover {
@@ -423,6 +427,7 @@ input[type="file"] {
   border-radius: 50%;
   background: #bbb;
   margin: 0 3px;
+  cursor: pointer;
 }
 #dots .on { background: #222; }
 
@@ -605,101 +610,16 @@ input[type="file"] {
   min-width: 0;
 }
 
-@media (max-width: 1024px) {
-  .menu {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: #ececec;
-    border-bottom: 1px solid #d2d2d2;
-    padding: 16px 20px 20px;
-  }
-  .menu.open { display: block; }
-  .menu a {
-    display: block;
-    margin: 0;
-    padding: 12px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-  }
-  .burger { display: block; }
-  .hide-mob { display: none !important; }
-  .shapka { position: sticky; }
-  .shapka-vnutri { position: relative; }
-  .dva, .chetyre, .tri, .biznes, .uzkiy, .niz-vnutri, .qr, .cookie-vnutri {
-    display: block;
-  }
-  .dva > *, .cifra, .tri .kartochka, .biznes-text, .biznes-foto {
-    width: 100%;
-    flex: none;
-    box-sizing: border-box;
-  }
-  .chetyre { flex-wrap: wrap; }
-  .chetyre .kartochka, .chetyre .cifra { width: 100%; }
-
-  .how-steps .kartochka {
-    flex: none;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .levaya-kolonka {
-    min-height: 0;
-    padding: 24px 20px;
-  }
-  .levaya-kolonka h1 {
-    font-size: 28px;
-    max-width: none;
-  }
-  .percent { font-size: 48px; }
-  .cifra, .kartochka, .anketa { margin-bottom: 12px; }
-  .okno, .kadr img { height: 280px; }
-  .phone { font-size: 22px; }
-
-  .cookie-vnutri {
-    text-align: center;
-  }
-  .cookie-vnutri .knopka-zelenaya {
-    margin-top: 12px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-@media (max-width: 700px) {
-  .kontent { width: 94%; }
-  .knopki-sverhu { display: none; }
-  .sekciya { padding: 28px 0; }
-  .verh { padding: 16px 0 8px; }
-  .logo { font-size: 12px; }
-  .tolko-yur {
-    font-size: 13px;
-    padding: 7px 12px;
-  }
-}
-
 .oshibka {
   color: #b42318;
   font-size: 13px;
   font-weight: 700;
   margin: 6px 0 0;
 }
+
 input.ploho {
   border-color: #b42318;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 #file {
   position: absolute;
@@ -711,7 +631,6 @@ input.ploho {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
 
 label[for="file"] {
   display: inline-block;
@@ -733,23 +652,19 @@ label[for="file"] {
   margin: 12px 0 6px;
 }
 
-
 label[for="file"]:hover {
   background: #22a24a;
   color: #ffffff;
 }
 
-
 label[for="file"]:active {
   filter: brightness(0.9);
 }
-
 
 #file:focus + label[for="file"] {
   outline: 2px solid #3d63e0; 
   outline-offset: 2px;
 }
-
 
 label[for="file"]::before {
   content: "📎";
@@ -757,4 +672,215 @@ label[for="file"]::before {
   font-size: 14px;
   display: inline-block;
   vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #ececec;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 16px 20px 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+  .menu.open { display: block; }
+  .menu a {
+    display: block;
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  .menu a:last-child {
+    border-bottom: none;
+  }
+  .burger { display: block; }
+  .hide-mob { display: none !important; }
+  .shapka { position: sticky; }
+  .shapka-vnutri { position: relative; }
+  
+  .dva, .tri, .biznes, .uzkiy, .niz-vnutri, .qr, .cookie-vnutri {
+    display: flex;
+    flex-direction: column;
+  }
+  .dva { gap: 16px; }
+  .dva > *, .cifra, .tri .kartochka, .biznes-text, .biznes-foto {
+    width: 100%;
+    flex: none;
+    box-sizing: border-box;
+  }
+  .chetyre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .how-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .how-steps .kartochka {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .levaya-kolonka {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+  .levaya-kolonka h1 {
+    font-size: 28px;
+    max-width: none;
+  }
+  .percent { font-size: 48px; }
+  .okno, .kadr img { height: 380px; }
+  .phone { font-size: 22px; }
+
+  .cookie-vnutri {
+    text-align: left;
+  }
+  .cookie-vnutri .knopka-zelenaya {
+    margin-top: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  html { scroll-padding-top: 72px; }
+  .kontent { width: 92%; }
+  .sekciya { padding: 32px 0; }
+  .verh { padding: 16px 0 8px; }
+  
+  .shapka-vnutri { height: 64px; }
+  .logo { font-size: 12px; }
+  .logo img { width: 34px; height: 34px; }
+  
+  .knopki-sverhu .knopka-zelenaya {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .levaya-kolonka {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+  .levaya-kolonka h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .levaya-kolonka p {
+    font-size: 14px;
+  }
+  .tolko-yur {
+    font-size: 13px;
+    padding: 8px 12px;
+    margin: 10px 0 14px;
+  }
+  .hero-list li {
+    font-size: 14px;
+  }
+  .knopka-hero {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+
+  .anketa {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+  .anketa h2 {
+    font-size: 20px;
+  }
+  .anketa h3 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  .chetyre {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .cifra {
+    padding: 14px;
+    border-radius: 14px;
+  }
+  .cifra b {
+    font-size: 20px;
+  }
+
+  .how-steps {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .biznes {
+    border-radius: 20px;
+  }
+  .biznes-text {
+    padding: 20px 16px;
+  }
+  .biznes-text h2 {
+    font-size: 22px;
+    margin-top: 4px;
+  }
+  .biznes-foto img {
+    min-height: 200px;
+    height: 220px;
+  }
+
+  .okno, .kadr img {
+    height: 260px;
+    border-radius: 16px;
+  }
+  .strelka {
+    width: 34px;
+    height: 34px;
+    margin-top: -17px;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .nalevo { left: 8px; }
+  .napravo { right: 8px; }
+
+  #contacts .anketa {
+    margin-bottom: 12px;
+  }
+  #contacts .anketa .knopka-zelenaya,
+  #contacts .anketa .knopka-sinyaya {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .niz {
+    padding: 24px 0;
+    text-align: center;
+  }
+  .niz-vnutri {
+    gap: 12px;
+  }
+
+  .politika-content {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kontent { width: 94%; }
+  .knopki-sverhu { display: none; }
+  .logo span, .logo { font-size: 11px; }
+  .percent { font-size: 38px; }
+  .phone { font-size: 20px; }
 }
