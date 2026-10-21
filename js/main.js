@@ -103,6 +103,13 @@ function checkConsent() {
   return true;
 }
 
+function showFormOk() {
+  var body = document.getElementById("form-body");
+  var done = document.getElementById("form-ok");
+  if (body) body.style.display = "none";
+  if (done) done.style.display = "block";
+}
+
 function checkLead(e) {
   var ok = true;
   if (!checkName(document.getElementById("name"), "err-name")) ok = false;
@@ -110,14 +117,20 @@ function checkLead(e) {
   if (!checkWhat(document.getElementById("what"), "err-what")) ok = false;
   if (!checkSum(document.getElementById("sum"), "err-sum")) ok = false;
   if (!checkConsent()) ok = false;
-  if (!ok) e.preventDefault();
-}
-
-function checkJob(e) {
-  var ok = true;
-  if (!checkName(document.getElementById("name2"), "err-name2")) ok = false;
-  if (!checkPhone(document.getElementById("phone2"), "err-phone2")) ok = false;
-  if (!ok) e.preventDefault();
+  if (!ok) {
+    e.preventDefault();
+    return;
+  }
+  var next = document.getElementById("nextUrl");
+  if (next) {
+    var base = location.href.split("?")[0].split("#")[0];
+    next.value = base + "?ok=1#form";
+  }
+  var btn = document.getElementById("sendBtn");
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = "Отправляем...";
+  }
 }
 
 var cur = 0;
@@ -159,9 +172,24 @@ window.onload = function() {
   if (next) next.onclick = function() { show(cur + 1); };
   if (document.getElementById("lenta")) show(0);
   var f1 = document.getElementById("form");
-  var f2 = document.getElementById("job");
   if (f1) f1.onsubmit = checkLead;
-  if (f2) f2.onsubmit = checkJob;
+  if (location.search.indexOf("ok=1") >= 0) showFormOk();
+
+  var fileInp = document.getElementById("file");
+  var fileName = document.getElementById("fileName");
+  if (fileInp && fileName) {
+    fileInp.onchange = function() {
+      if (fileInp.files && fileInp.files.length) {
+        var n = fileInp.files[0].name;
+        if (n.length > 36) n = n.slice(0, 16) + "..." + n.slice(-12);
+        fileName.innerHTML = n;
+        fileName.className = "file-name on";
+      } else {
+        fileName.innerHTML = "Файл не выбран";
+        fileName.className = "file-name";
+      }
+    };
+  }
 
   var btn = document.getElementById("menuBtn");
   var menu = document.querySelector(".menu");

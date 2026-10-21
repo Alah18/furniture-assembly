@@ -50,8 +50,14 @@
       <input type="hidden" name="_subject" value="Заявка на сборку мебели">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+      <input type="hidden" name="_next" id="nextUrl" value="">
       <input type="text" name="_honey" style="display:none">
+      <div id="form-ok" class="form-ok" style="display:none">
+        <h2>Заявка принята</h2>
+        <p>Оставайтесь на связи — Алексей перезвонит в рабочее время.</p>
+        <p class="melkiy">Пн–пт 9:00–18:00 · +7 900 261-33-22</p>
+      </div>
+      <div id="form-body">
       <h2>Узнайте стоимость сборки</h2>
       <p class="podr">Опишите мебель — перезвоним и согласуем выезд. Работаем только с юр. лицами и ИП.</p>
       <label for="name">Имя</label>
@@ -66,17 +72,23 @@
       <label for="sum">Стоимость мебели</label>
       <input type="text" name="Стоимость мебели" id="sum" placeholder="180 000 ₽">
       <p class="oshibka" id="err-sum"></p>
-      <label for="file">Прикрепить файл (PDF, фото)</label>
-      <input type="file" name="Файл" id="file" accept=".pdf,image/*">
+      <span class="file-title">Файл (PDF или фото)</span>
+      <div class="file-box">
+        <input type="file" name="Файл" id="file" accept=".pdf,image/*">
+        <label for="file" id="fileLabel" class="file-btn">Выбрать файл</label>
+        <span class="file-name" id="fileName">Файл не выбран</span>
+      </div>
       <div class="checkbox-wrap" id="consent-wrap">
         <label class="checkbox-label">
-          <input type="checkbox" name="Согласие" id="consent" value="Да">
+          <input type="checkbox" name="Согласие" id="consent" value="Да" required>
           <span>Даю согласие на обработку персональных данных в соответствии с <a href="#politika" target="_blank">Политикой конфиденциальности</a>.</span>
         </label>
         <p class="oshibka" id="err-consent"></p>
       </div>
-      <button class="knopka-dlinnaya" type="submit">Отправить заявку</button>
+      <button class="knopka-dlinnaya" type="submit" id="sendBtn">Отправить заявку</button>
+      <p class="melkiy">Ответ — Алексей, +7 900 261-33-22. Рабочее время: пн–пт 9:00–18:00.</p>
       <p id="msg1" class="ok"></p>
+      </div>
     </form>
   </div>
 

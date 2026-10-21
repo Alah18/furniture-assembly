@@ -621,58 +621,7 @@ input.ploho {
   border-color: #b42318;
 }
 
-#file {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
 
-label[for="file"] {
-  display: inline-block;
-  width: 100%;
-  padding: 12px 14px;
-  background: #ffffff;
-  border: 1px dashed #22a24a; 
-  border-radius: 14px;        
-  box-sizing: border-box;
-  color: #22a24a;            
-  font-family: Manrope, Arial, sans-serif;
-  font-size: 14px;           
-  font-weight: 700;
-  text-align: center;
-  text-transform: none;       
-  letter-spacing: 0;          
-  cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
-  margin: 12px 0 6px;
-}
-
-label[for="file"]:hover {
-  background: #22a24a;
-  color: #ffffff;
-}
-
-label[for="file"]:active {
-  filter: brightness(0.9);
-}
-
-#file:focus + label[for="file"] {
-  outline: 2px solid #3d63e0; 
-  outline-offset: 2px;
-}
-
-label[for="file"]::before {
-  content: "📎";
-  margin-right: 8px;
-  font-size: 14px;
-  display: inline-block;
-  vertical-align: middle;
-}
 
 @media (max-width: 1024px) {
   .menu {
@@ -883,4 +832,83 @@ label[for="file"]::before {
   .logo span, .logo { font-size: 11px; }
   .percent { font-size: 38px; }
   .phone { font-size: 20px; }
+}
+.form-ok {
+  text-align: center;
+  padding: 28px 10px 10px;
+}
+.form-ok h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: #1a7a36;
+}
+.form-ok p {
+  color: #4d4d4d;
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.knopka-dlinnaya:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+
+.file-title {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+
+.file-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.file-box input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-btn {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 11px 18px !important;
+  background: #fff;
+  border: 1px solid #22a24a;
+  border-radius: 30px;
+  color: #22a24a !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.file-btn:hover {
+  background: #22a24a;
+  color: #fff !important;
+}
+
+.file-name {
+  font-size: 13px;
+  color: #6f6f6f;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.file-name.on {
+  color: #1a7a36;
+  font-weight: 700;
 }
