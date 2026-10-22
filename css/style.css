@@ -602,12 +602,15 @@ input[type="file"] {
 }
 
 .how-steps {
+  display: flex;
   flex-wrap: wrap;
+  gap: 12px;
 }
 
 .how-steps .kartochka {
-  flex: 1 1 22%;
-  min-width: 0;
+  flex: 1 1 calc(25% - 12px);
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
 .oshibka {
@@ -621,7 +624,16 @@ input.ploho {
   border-color: #b42318;
 }
 
-
+@media (max-width: 900px) {
+  .how-steps .kartochka {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+@media (max-width: 600px) {
+  .how-steps .kartochka {
+    flex: 1 1 100%;
+  }
+}
 
 @media (max-width: 1024px) {
   .menu {
@@ -911,4 +923,58 @@ input.ploho {
 .file-name.on {
   color: #1a7a36;
   font-weight: 700;
+}
+
+.block-card {
+  background: #f6f6f6;
+  border: 1px solid #e3e3e3;
+  border-radius: 28px;
+  padding: 32px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.block-card-title {
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.block-card-text {
+  color: #4d4d4d;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.block-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Адаптив под мобильные устройства и планшеты */
+@media (max-width: 1024px) {
+  .block-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .block-card-actions .knopka-zelenaya,
+  .block-card-actions .knopka-temnaya,
+  .block-card-actions .knopka-sinyaya {
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-card {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+  .block-card-title {
+    font-size: 20px;
+  }
 }
