@@ -46,7 +46,7 @@
       <a class="knopka-zelenaya knopka-hero" href="#price">Смотреть тарифы</a>
     </div>
 
-    <form id="form" class="anketa" action="https://formsubmit.co/bromkvantiko@gmail.com" method="POST" enctype="multipart/form-data">
+    <form id="form" class="anketa" action="send.php" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Заявка на сборку мебели">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
@@ -72,9 +72,9 @@
       <label for="sum">Стоимость мебели</label>
       <input type="text" name="Стоимость мебели" id="sum" placeholder="180 000 ₽">
       <p class="oshibka" id="err-sum"></p>
-      <span class="file-title">Файл (PDF или фото)</span>
+      <span class="file-title">Файл (PDF, docx, txt или фото)</span>
       <div class="file-box">
-        <input type="file" name="Файл" id="file" accept=".pdf,image/*">
+        <input type="file" name="attachment" id="file" accept=".pdf,.docx,.txt,image/*">
         <label for="file" id="fileLabel" class="file-btn">Выбрать файл</label>
         <span class="file-name" id="fileName">Файл не выбран</span>
       </div>
@@ -185,7 +185,7 @@
       </div>
       <div class="kartochka">
         <div class="podpis"></div>
-        <h3>Сдача</h3>
+        <h3>Сдача</h3> 
         <p>Фотоотчёт, упаковка, документы.</p>
       </div>
     </div>
